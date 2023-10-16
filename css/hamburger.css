@@ -1,0 +1,40 @@
+/* CSS */
+/* Style for the mobile menu button */
+.fl-menu-mobile-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+}
+
+/* Style for the menu icon */
+.fl-menu-icon {
+    width: 30px;
+    height: 20px;
+    display: inline-block;
+}
+
+/* Style for the menu items */
+.fl-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.fl-menu ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Add styles for menu links */
+.fl-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Add hover effect for menu links */
+.fl-menu ul li a:hover {
+    color: #ff0000;
+}

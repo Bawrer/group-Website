@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="./css/main.css">
+<title>Login Form</title>
+</head>
+<body> 
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <div class="input-group">
+            <label for="username">Username (Email)</label>
+            <input type="email" id="username" name="username" placeholder="enter username" required>
+            <p id="usernameError" class="error-message"></p>
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <div class="password-wrapper">
+                <input type="password" id="password" name="password" placeholder="enter password" required>
+                <span class="eye-toggle" id="eyeToggle"><i class="fas fa-eye"></i></span>
+            </div>
+            <p id="passwordError" class="error-message"></p>
+        </div>
+        <div class="container">
+            
+                
+                <label for="rememberMe"><input type="checkbox" id="rememberMe"/><b>Remember Me:</b></label>
+          
+        </div>
+
+        <button type="submit" class="submit-btn" id="loginButton">Login</button>
+
+        <button type="button" id="forgotPassword" class="forgot-btn">Forgot Password?</button>
+        <p id="loginMessage" class="error-message"></p>
+    </form>
+    <button type="button" id="registerButton" class="register-btn">Register</button>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("loginForm");
+    const passwordInput = document.getElementById("password");
+    const passwordError = document.getElementById("passwordError");
+    const eyeToggle = document.getElementById("eyeToggle");
+    const forgotPasswordButton = document.getElementById("forgotPassword");
+    const loginButton = document.getElementById("loginButton");
+    const loginMessage = document.getElementById("loginMessage");
+  
+
+    let passwordAttempts = 0;
+    // Defines the maximum number of allowed login attempts
+    const maxLoginAttempts = 3;
+    let loginAttempts = 0;
+
+    // Defines the valid username and password using strings and arrays
+    const validUsername = 'molelekoa54@gmail.com';
+    const validPassword = 'P@ss123456';
+    
+    // Define the function to be executed when the button is clicked
+    function handleLogin() {
+        const enteredUsername = form.username.value;
+        const enteredPassword = form.password.value;
+
+        if (enteredUsername === validUsername && enteredPassword === validPassword) {
+            // Display a success alert
+            alert('Login successful!');
+            loginAttempts = 0; // Reset login attempts on successful login
+        } else {
+            loginAttempts++;
+
+            if (loginAttempts < maxLoginAttempts) {
+                // Display an error alert when login attempts have failed.
+                alert(`Login failed. You have ${maxLoginAttempts - loginAttempts} attempts left.`);
+            } else {
+                // Display an account blocked alert
+                alert('Login failed. Account blocked. Please contact support.');
+            }
+        }
+    }
+
+    // Event listener to the login button
+    loginButton.addEventListener('click', handleLogin);
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const username = form.username.value;
+        const password = passwordInput.value;
+        // Rest of your validation code...
+
+
+  // Showing and Hiding Password from the user. 
+  
+  function showHidePassword() {
+      if (passwordInput.type === "password") {
+          passwordInput.setAttribute("type", "text");
+          eyeToggle.querySelector("i").classList.remove("fa-eye");
+          eyeToggle.querySelector("i").classList.add("fa-eye-slash");
+      } else {
+          passwordInput.setAttribute("type", "password");
+          eyeToggle.querySelector("i").classList.remove("fa-eye-slash");
+          eyeToggle.querySelector("i").classList.add("fa-eye");
+      }
+  }
+
+  eyeToggle.addEventListener("click", showHidePassword);
+
+
+});
+
+   
+  
+
+    function showHidePassword() {
+        if (passwordInput.type === 'password') {
+            passwordInput.setAttribute('type', 'text');
+            eyeToggle.classList.remove('fa-eye');
+            eyeToggle.classList.add('fa-eye-slash');
+        } else {
+            passwordInput.setAttribute('type', 'password');
+            eyeToggle.classList.remove('fa-eye-slash');
+            eyeToggle.classList.add('fa-eye');
+        }
+    }
+
+    eyeToggle.addEventListener('click', showHidePassword);
+
+    form.addEventListener('submit', function(event) {
+        if (passwordAttempts >= 3) {
+            loginMessage.textContent = "Out of chances. Please try again later.";
+            event.preventDefault();
+        } else {
+            passwordAttempts++;
+        }
+    });
+
+    forgotPasswordButton.addEventListener('click', function() {
+        alert("Please contact support to reset your password.");
+    });
+
+    const registerButton = document.getElementById('registerButton');
+    registerButton.addEventListener('click', function() {
+        alert("Register as a new user from the home page.");
+
+    });
+  });
+</script>
+<section><footer><a href="index.html"><i class='bx bx-home-heart bx-lg bx-tada-hover' id="homeicon"></i></a></footer></section>
+<section><footer><a href="index.html"><i class='bx bx-home-heart bx-lg bx-tada-hover' id="homeicon"></i></a></footer></section>
+</body>
+</html>

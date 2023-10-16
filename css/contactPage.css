@@ -1,0 +1,476 @@
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background:rgb(247, 236, 236);
+}
+
+/* Always set the map height explicitly to define the size of the div
+      * element that contains the map. */
+
+      #map {
+      
+          height: 90%;
+      
+      }
+      
+       
+      
+       
+      
+      h1{
+      
+          font-size: 50px;
+      
+          text-align: center;
+      
+          padding-top: 90px;
+      
+          margin-left: -9px;
+      
+          color: peru;
+      
+      }
+      
+       
+      
+      /*Heading Shake Effect*/
+      
+       
+      
+      h1:hover {
+      
+          animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+      
+          transform: translate3d(0, 0, 0);
+      
+          backface-visibility: hidden;
+      
+          perspective: 1000px;
+      
+      }
+      
+       
+      
+      @keyframes shake {
+      
+          10%, 90% {
+      
+              transform: translate3d(-1px, 0, 0);
+      
+          }
+      
+       
+      
+          20%, 80% {
+      
+              transform: translate3d(2px, 0, 0);
+      
+          }
+      
+       
+      
+          30%, 50%, 70% {
+      
+              transform: translate3d(-4px, 0, 0);
+      
+          }
+      
+       
+      
+          40%, 60% {
+      
+              transform: translate3d(4px, 0, 0);
+      
+          }
+      
+      }
+      
+       
+      
+      h3{
+      
+          text-align: center;
+      
+          color: peru;
+      
+      }
+      
+       
+      
+      #left {
+      
+          float: left;
+      
+          width: 50%;
+      
+          height: 700px;
+      
+       
+      
+      }
+      
+      #right {
+      
+          display: inline-block;
+          position: absolute;
+          width: 50%;
+          height: 700px;
+          margin-top: 100px;
+      
+      }
+      
+      #cleared {
+      
+          clear: both;
+      
+      }
+      
+       
+      
+       
+      
+      ul{
+      
+          list-style-type: none;
+      
+      }
+      
+       
+      
+      form { max-width:420px; margin:20px auto; }
+      
+       
+      
+      /*background: #13232f;*/
+      
+       
+      
+      .formbox{
+      
+          background: transparent;
+      
+          padding: 10px;
+      
+          max-width:400px;
+      
+          margin: 10px auto;
+      
+          border-radius: 1px;
+      
+          box-shadow:0 4px 10px 4px transparent;
+      
+      }
+      
+      form {
+      
+          display: inline-block;
+      
+      }
+      
+      input.short{
+      
+          width: 48%;
+      
+          /*max-width: 48%; !* or whatever width you want. *!*/
+      
+          color: grey;
+      
+          font-family: Helvetica, Arial, sans-serif;
+      
+          font-weight:500;
+      
+          font-size: 18px;
+      
+          border-radius: 5px;
+      
+          line-height: 22px;
+      
+          background-color: transparent;
+      
+          border:2px solid peru;
+      
+          transition: all 0.3s;
+      
+          padding: 13px;
+      
+          margin-right: 6px;
+      
+          margin-bottom: 15px;
+      
+          box-sizing: border-box;
+      
+          outline:0;
+      
+      }
+      
+       
+      
+      input:focus{
+      
+          /*border-bottom: 2px solid cyan;*/
+      
+      }
+      
+       
+      
+       
+      
+      #map-overlap{
+      
+          top: 10px;
+      
+          left: 10px;
+      
+          margin-top: -650px;
+      
+          margin-left: 50px;
+      
+          text-align: left;
+      
+          font-size: 17px;
+      
+          padding-top: 15px;
+      
+          padding-left: 15px;
+      
+          width: 205px;
+      
+          height: 155px;
+      
+          z-index: 10;
+      
+          font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+      
+          font-weight:200;
+      
+          position: relative;
+      
+          background: rgb(30,30,40);
+      
+          color: palevioletred;
+      
+      }
+      
+       
+      
+      #at{
+      
+          color: pink;
+      
+       
+      
+      }
+      
+       
+      
+      span{
+      
+          text-align: right;
+      
+          font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+      
+          font-weight:200;
+      
+      }
+      
+       
+      
+       
+      
+      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      
+          color: dimgrey;
+      
+      }
+      
+       
+      
+      .feedback-input {
+      
+          color: grey;
+      
+          font-family: Helvetica, Arial, sans-serif;
+      
+          font-weight:500;
+      
+          font-size: 18px;
+      
+          border-radius: 5px;
+      
+          line-height: 22px;
+      
+          background-color: transparent;
+      
+          border:2px solid peru;
+      
+          transition: all 0.3s;
+      
+          padding: 13px;
+      
+          margin-bottom: 15px;
+      
+          width:99%;
+      
+          box-sizing: border-box;
+      
+          outline:0;
+      
+      }
+      
+       
+      
+      .feedback-input:focus {
+      
+          border:2px solid white;
+      
+      }
+      
+       
+      
+      textarea {
+      
+          height: 150px;
+      
+          line-height: 150%;
+      
+          resize:vertical;
+      
+      }
+      
+       
+      
+      [type="submit"] {
+      
+          font-family: Helvetica, Arial, sans-serif;
+      
+          width: 20%;
+      
+          background: rgb(30,30,40);
+      
+          border-radius:5px;
+      
+          cursor:pointer;
+      
+          color: white;
+      
+          font-size:16px;
+      
+          margin-left: 80%;
+      
+          padding-top:10px;
+      
+          padding-bottom:10px;
+      
+          transition: all 0.3s;
+      
+          margin-top:-4px;
+      
+          border:2px solid rgb(158, 113, 139);
+      
+          font-weight:500;
+      
+       
+      
+      }
+      
+      [type="submit"]:hover {
+      
+          background: rgb(37, 37, 32);
+      
+          color: rgb(109, 89, 98);
+      
+          outline: 0 !important;
+      
+      }
+      
+       
+      
+       
+      
+      @media all and (max-width:800px) {
+      
+          #left, #right
+      
+          {
+      
+              display: block;
+      
+              float: none;
+      
+              width: 100%;
+      
+          }
+      
+      }
+      
+       
+      
+      @media all and (max-width:800px) {
+      
+          .short
+      
+          {
+      
+              min-width: 99%;
+      
+       
+      
+          }
+        }
+      
+      
+      section {
+
+        display: flex;
+    
+        justify-content: center; /* Center horizontally */
+    
+        align-items: center; /* Center vertically */
+    
+        height: 20vh; /* Optional: Make the section take the full viewport height */
+    
+       
+    
+      }
+      .emailError{
+        color: red;
+        float: right;
+      }
+      section {
+
+        display: flex;
+    
+        justify-content: center; /* Center horizontally */
+    
+        align-items: center; /* Center vertically */
+    
+        height: 5px; /* Optional: Make the section take the full viewport height */
+    
+      }
+      #homeicon{
+        color: peru;
+      }
+      
+      /*@media all and (max-width:800px) {*/
+      
+          /*#map-overlap*/
+      
+          /*{*/
+      
+              /*text-align: center;*/
+      
+              /*margin-left: -10px;*/
+      
+              /*display: block;*/
+      
+              /*width: 99%;*/
+      
+          /*}*/
+      
+      /*}*/
+      
+       
+      
+       

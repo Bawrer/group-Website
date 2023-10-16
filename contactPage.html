@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/contactPage.css">
+    
+    
+
+
+</head>
+<body>
+
+
+
+<div class="row">
+<div class="col-xs-12">
+    <div id="left">
+
+        <h1>Contact Us</h1>
+
+        <div class="formbox" id="formbox">
+            <form class="contact" id="contact" action="https://formspree.io/f/mwkdwwpr" method="POST">
+                <input id="name" name="name" type="text" class="short" placeholder="Name" onfocus="this.placeholder=''" onblur="this.placeholder='Name'"/>
+                <span class="nameError" id="nameError"></span>
+                <input id="email" name="email" type="text" class="short" placeholder="Email" onfocus="this.placeholder=''" onblur="this.placeholder='Email'"/>
+                <span class="emailError" id="emailError"></span>
+                <input id="subject" name="subject" type="text" class="feedback-input" placeholder="Subject" onfocus="this.placeholder=''" onblur="this.placeholder='Subject'"/>
+                <span class="subectError" id="subjectError"></span>
+                <textarea id="text" name="text" class="feedback-input" placeholder="Message" onfocus="this.placeholder=''" onblur="this.placeholder='Message'"></textarea>
+                <span class="textError" id="textError"></span>
+                <input type="submit" value="SEND" class="btn" onclick="send()"/>
+                <p id="my-form-status"></p>
+            </form>
+
+        </div>
+
+        </div>
+
+    </div>
+
+    <div id="right">
+        <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d847614.6226093159!2d18.6560594!3d-33.915538049999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc500f8826eed7%3A0x687fe1fc2828aa87!2sCape%20Town!5e0!3m2!1sen!2sza!4v1696337220462!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+    </div>
+    <div id="cleared"></div>
+    <form name="contactForm" onsubmit="return validateForm()">
+
+
+</div>
+<!--Formspree-->
+<script>
+    var form = document.getElementById("contact");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission!";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
+
+<!--////////////////////////////////////////////////////////////////////////////////-->
+
+<section><footer><a href="index.html"><i class='bx bx-home-heart bx-lg bx-tada-hover' id="homeicon"></i></a></footer></section>
+
+</body>
+</html>

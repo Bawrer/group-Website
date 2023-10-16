@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Instructions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            background-image: url('./zombies.jpg');
+            background-size: cover; /* Adjust to your preference */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    background-attachment: fixed;
+        }
+
+        header {
+            background-color: #155203;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        #game-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db; 
+    color: #000000; 
+    border: 2px solid #2980b9; 
+    border-radius: 5px; 
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+/* Hover effect */
+#game-button:hover {
+    background-color: #2980b9; 
+    border-color: #3498db; 
+    transform: scale(1.05); 
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Zombie Shooting Game</h1>
+    </header>
+    <div class="container">
+        <h2>How to Play:</h2>
+        <h3>Welcome to our Zombie Apocalypse Game! Follow these instructions to get started:</h3>
+        <ol>
+            <li>Use the arrow keys or WASD keys to move your character.</li>
+            <li>Kill as many zombies as you can, to earn points.</li>
+            <li>The game advances when your gun changes. You'll see the zombies coming towards you in more numbers, and faster.</li>
+            <li>Use the mouse to aim and click to shoot.</li>
+        </ol>
+       
+        <h2>Controls</h2>
+        <p>The following controls are available:</p>
+        <ul>
+            <li>Arrow keys or WASD keys: Move</li>
+            <li>Mouse: Aim</li>
+            <li>Left mouse button: Shoot</li>
+        </ul>
+
+        <button id="game-button">START GAME!</button>
+    </div>
+</body>
+</html>

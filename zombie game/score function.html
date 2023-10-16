@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Game</title>
+    <style>
+        /* Add CSS styles for your game here */
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <!-- Your game elements go here -->
+    </div>
+
+    <div id="game-over-screen" style="display: none;">
+        <h1>Congratulations! You've Finished the Game</h1>
+        <p>Your score: <span id="final-score">0</span></p>
+    </div>
+
+    <script>
+        // JavaScript game logic here
+        
+        // Example game logic: When a certain condition is met (e.g., reaching a specific score or level), call the function to display the game completion message.
+        function checkGameCompletion() {
+            const score = 100; // Replace with your actual game score or condition
+            if (score >= 1000) { // Change the condition as needed
+                showGameCompletionMessage(score);
+            }
+        }
+
+        // Function to display the game completion message
+        function showGameCompletionMessage(score) {
+            const gameContainer = document.getElementById('game-container');
+            const gameOverScreen = document.getElementById('game-over-screen');
+            const finalScoreElement = document.getElementById('final-score');
+
+            // Hide the game container
+            gameContainer.style.display = 'none';
+
+            // Display the game completion message
+            gameOverScreen.style.display = 'block';
+            finalScoreElement.textContent = score;
+        }
+
+        // Call checkGameCompletion() whenever your game logic determines the game is finished.
+        // For this example, we'll call it after a delay.
+        setTimeout(() => {
+            checkGameCompletion();
+        }, 5000); // Simulate a 5-second delay, replace with your game logic
+        
+    </script>
+</body>
+</html>

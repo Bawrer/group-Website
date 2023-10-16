@@ -1,0 +1,165 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  
+  background-size: cover;
+  backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+  background-color: rgba(255, 255, 255, 0.5); 
+  background-image: url('./IMG-20230828-WA0188.jpg');
+  
+}
+
+.login-container {
+  background-color: darkgoldenrod;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  border-color: #0056b3;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items:initial;
+  margin-bottom: 15px;
+position: absolute;
+}
+
+.checkbox-group input[type="checkbox"] {
+align-items: inherit;
+  position: absolute;
+}
+
+.submit-btn,
+.forgot-btn,
+.register-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.submit-btn:hover,
+.forgot-btn:hover,
+.register-btn:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color:black;
+  margin-top: 5px;
+  font-weight: 900px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.eye-toggle {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+/* Popup styles */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: darkgoldenrod;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+  text-align: center;
+}
+
+.popup h2 {
+  font-size: 20px;
+  font-family: montserrat;
+  margin-bottom: 10px;
+}
+
+  /* Styles for the h3 element */
+  .home h3 {
+    font-size: 24px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.popup-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 5px;
+}
+.top-popup {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color:transparent;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  display: none;
+  width: 100%;
+  z-index: 2;
+  font-size: large;
+  font-weight: bolder;
+}
+
+
+
+
+  @media(max-width: 37.5em)
+  {
+    .section-title{font-size:2.8rem}
+}

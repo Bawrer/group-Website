@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(/slider/images/shutterstock_2093652733-scaled.jpg);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper {
+    width: 100%;
+    text-align: center;
+}
+
+.swiper-slide img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    max-height: 600px;
+    border-radius: 15px;
+    transition: transform 0.3s; /* Add a smooth transition effect */
+    transform-style:unset;
+   
+}
+
+/* Scale the image up on hover */
+.swiper-slide img:hover {
+    transform: scale(1.2); /* You can adjust the scale factor as needed */
+    box-shadow: 0px 0px 10px rgba(241, 2, 2, 0.5); /* Adjust the shadow values as needed */
+}
+ 
+ button {
+    text-decoration: none;
+    padding-bottom: 4px;
+    position: fixed;
+  bottom: 10px;  
+  right: 10px;  
+  border-radius: 5px;
+  background-color: #9fc0e4;  
+  color: #fff; 
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+    
+ }
+
+ a{
+    text-decoration: none;
+    
+ }
+ button:hover {
+    background-color: #abb860; /* Change background color on hover */
+  }
+  section {
+
+    display: flex;
+
+    justify-content: center; /* Center horizontally */
+
+    align-items: center; /* Center vertically */
+
+    height: 20vh; /* Optional: Make the section take the full viewport height */
+
+   
+
+  }

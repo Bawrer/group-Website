@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Events Page</title>
+    <style>
+        
+        /* our CSS styles */
+/* Define button styles */
+/*@media (max-width: 768px){
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    /* Example: Hide certain elements on small screens */
+   /* .desktop-only {
+       /* display: none;*/
+    }
+}
+
+#homeicon{
+align-items: center;
+font-size: large;
+display: flex;
+background-color: darkgreen;
+}
+
+
+.event-card {
+    /*display: flex;*/
+    padding: 10px 20px;
+    background-color: #3498db; /* Button background color */
+    color: #000000; /* Button text color */
+    font-size: 18px; /* Button text size */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.event-card:hover {
+    background-color: #18cec5; /* Darker background color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    box-shadow: 2 40px 80px rgba(235, 231, 7, 0.2); /* Add a subtle box shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Additional styles (optional) */
+.event-card:focus {
+    outline: none; /* Remove outline on focus for better accessibility */
+}
+
+/* Use this class to style buttons with different colors */
+.event-card {
+    background-color: #e74c3c; /* Red */
+}
+
+.event-card{
+    background-color: #27ae60; /* Green */
+}
+
+/* Add more classes for different button styles as needed */
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            /*margin: 100px;
+            padding: 100px;
+            display: flex;*/
+           /* box-sizing: border-box;*/
+             background-image: url('4873152.jpg');
+            background-size: cover;
+            
+        }
+
+
+ .bg-image {
+            filter: blur(20px);
+  -webkit-filter: blur(20px);
+
+        }
+
+
+        .header {
+            
+            
+            display: flex;
+            /*flex-direction: row;*/
+           /* justify-content: space-between;*/
+            
+            
+        }
+        header{
+             background-color: #636363;
+        }
+        footer, header {
+           
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .event-card {
+            background-color: #fff;
+            margin:  20px;
+            padding: 20px; /* Width removed for perfect fit on screen */
+            gap: 2rem;
+            flex-wrap: wrap-reverse;
+           flex-direction: column-reverse;
+            height:100%;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    section{
+        box-sizing: border-box;
+        padding: 20;
+        background-color: white;
+    }
+
+        /* Add more styles for your event cards, buttons, etc. */
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Upcoming Events</h1>
+    </header>
+    <div class="bg-image" style="background-image: url('4873152.jpg')">
+
+    </div>
+    
+    <div class="event-card">
+        <h2>ABSA IT Summit</h2>
+        <p>Date: September 20, 2023</p>
+        <p>Location: City Hall</p>
+        <button onclick="registerForEvent()">Register</button>
+    </div>
+
+    <div class="event-card">
+        <h2>Medi-Clinic Health and Wellness Clinic</h2>
+        <p>Date: October 5, 2023</p>
+        <p>Location: Civic Centre, Cape Town</p>
+        <button onclick="registerForEvent()">Register</button>
+    </div>
+
+
+<div class="event-card">
+    <h2>Depression Think Tank</h2>
+    <p>Date: October 13, 2023</p>
+    <p>Location: V&A Waterfront</p>
+    <button onclick="registerForEvent()">Register</button>
+</div>
+
+
+<div class="event-card">
+    <h2>10 K run </h2>
+    <p>Date: November 23, 2023</p>
+    <p>Location: Rondebosch</p>
+    <button onclick="registerForEvent()">Register</button>
+</div>
+
+
+<div class="event-card">
+    <h2>EduTech Seminar</h2>
+    <p>Date: December 6, 2023</p>
+    <p>Location: Athlone Stadium</p>
+    <button onclick="registerForEvent()">Register</button>
+</div>
+
+</div>
+
+    
+
+    <script>
+        // Function to the Register button 
+        function registerForEvent(eventId) {
+            alert('You have successfully Registered for this Event!');
+        }
+    </script>
+    <section><footer><a href="index.html"><i class='bx bx-home-heart bx-lg bx-tada-hover' id="homeicon"></i></a></footer></section>
+</body>
+</html>
